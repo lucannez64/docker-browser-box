@@ -14,8 +14,6 @@ install_browser_box() {
   ln -sf browser-box /target/google-chrome
   echo "Installing google-chrome-stable..."
   ln -sf browser-box /target/google-chrome-stable
-  echo "Installing tor-browser..."
-  ln -sf browser-box /target/tor-browser
   echo "Installing chromium-browser..."
   ln -sf browser-box /target/chromium-browser
   echo "Installing firefox..."
@@ -45,8 +43,6 @@ uninstall_browser_box() {
   rm -rf /target/google-chrome
   echo "Uninstalling google-chrome-stable..."
   rm -rf /target/google-chrome-stable
-  echo "Uninstalling tor-browser..."
-  rm -rf /target/tor-browser
   echo "Uninstalling chromium-browser..."
   rm -rf /target/chromium-browser
   echo "Uninstalling firefox..."
@@ -112,7 +108,7 @@ case "$1" in
   uninstall)
     uninstall_browser_box
     ;;
-  google-chrome|google-chrome-stable|tor-browser|chromium-browser|firefox)
+  google-chrome|google-chrome-stable|chromium-browser|firefox)
     create_user
     grant_access_to_video_devices
     launch_browser $@
