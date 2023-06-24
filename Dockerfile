@@ -1,4 +1,4 @@
-FROM ubuntu:bionic-20180526 AS install-tor-browser
+FROM ubuntu:focal-20230605 AS install-tor-browser
 
 ENV TOR_VERSION=7.5.6 \
     TOR_FINGERPRINT=0x4E2C6E8793298290
